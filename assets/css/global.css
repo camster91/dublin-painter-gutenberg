@@ -1,0 +1,183 @@
+/*
+ * Dublin Painter — Global Front-End Styles
+ *
+ * Supplements theme.json with styles that can't be expressed in JSON.
+ */
+
+/* ============================================
+ * RESET & BASE
+ * ============================================ */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+ * INTER FONT
+ * ============================================ */
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('./fonts/Inter-Variable.woff2') format('woff2');
+}
+
+/* Fallback if custom font fails */
+body {
+	font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* ============================================
+ * LINKS
+ * ============================================ */
+a {
+	color: var(--wp--preset--color--brand-blue);
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+a:hover {
+	color: #1d4ed8;
+	text-decoration: underline;
+}
+
+/* ============================================
+ * FOCUS VISIBLE (Accessibility)
+ * ============================================ */
+:focus-visible {
+	outline: 2px solid var(--wp--preset--color--brand-blue);
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+/* ============================================
+ * SELECTION
+ * ============================================ */
+::selection {
+	background: var(--wp--preset--color--brand-blue);
+	color: #ffffff;
+}
+
+/* ============================================
+ * BLOCK PATTERN OVERRIDES
+ * ============================================ */
+
+/* Service area pills */
+.dp-service-areas p {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.dp-service-areas p:hover {
+	transform: translateY(-2px);
+}
+
+/* Process steps */
+.dp-process-step {
+	text-align: center;
+}
+
+/* ============================================
+ * MOBILE CTA BAR
+ * ============================================ */
+.dp-mobile-cta {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	padding: 8px 16px;
+	gap: 8px;
+}
+
+.dp-mobile-cta a {
+	flex: 1;
+	text-align: center;
+	padding: 12px 8px;
+	border-radius: 12px;
+	font-weight: 700;
+	font-size: 14px;
+	text-decoration: none;
+	transition: transform 0.2s ease;
+}
+
+.dp-mobile-cta a:active {
+	transform: scale(0.95);
+}
+
+.dp-mobile-cta-call {
+	background: var(--wp--preset--color--brand-green);
+	color: #ffffff;
+}
+
+.dp-mobile-cta-quote {
+	background: var(--wp--preset--color--brand-blue);
+	color: #ffffff;
+}
+
+@media (max-width: 767px) {
+	.dp-mobile-cta {
+		display: flex;
+	}
+}
+
+/* ============================================
+ * ANIMATIONS
+ * ============================================ */
+@keyframes dp-fade-up {
+	from {
+		opacity: 0;
+		transform: translateY(24px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.dp-animate-fade-up {
+	animation: dp-fade-up 0.6s ease-out forwards;
+}
+
+.dp-animate-delay-1 { animation-delay: 0.1s; }
+.dp-animate-delay-2 { animation-delay: 0.2s; }
+.dp-animate-delay-3 { animation-delay: 0.3s; }
+.dp-animate-delay-4 { animation-delay: 0.4s; }
+
+/* ============================================
+ * REDUCED MOTION
+ * ============================================ */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* ============================================
+ * PRINT STYLES
+ * ============================================ */
+@media print {
+	.dp-mobile-cta,
+	.wp-block-navigation,
+	.dp-ba-handle {
+		display: none !important;
+	}
+}

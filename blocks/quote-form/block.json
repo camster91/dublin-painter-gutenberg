@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "dublin-painter/quote-form",
+	"title": "Quote Form",
+	"description": "Dublin Painter Quote Form block.",
+	"category": "dublin-painter",
+	"icon": "forms",
+	"attributes": {},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"spacing": { "margin": true, "padding": true }
+	},
+	"render": "file:./render.php",
+	"textdomain": "dublin-painter"
+}

@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "dublin-painter/process-timeline",
+	"title": "Process Timeline",
+	"description": "Dublin Painter Process Timeline block.",
+	"category": "dublin-painter",
+	"icon": "list-view",
+	"attributes": {},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"spacing": { "margin": true, "padding": true }
+	},
+	"render": "file:./render.php",
+	"textdomain": "dublin-painter"
+}

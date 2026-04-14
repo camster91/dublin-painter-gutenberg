@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "dublin-painter/service-features",
+	"title": "Service Features",
+	"description": "Dublin Painter Service Features block.",
+	"category": "dublin-painter",
+	"icon": "star-filled",
+	"attributes": {},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"spacing": { "margin": true, "padding": true }
+	},
+	"render": "file:./render.php",
+	"textdomain": "dublin-painter"
+}

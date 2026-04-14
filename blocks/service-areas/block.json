@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "dublin-painter/service-areas",
+	"title": "Service Areas",
+	"description": "Dublin Painter Service Areas block.",
+	"category": "dublin-painter",
+	"icon": "location",
+	"attributes": {},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"spacing": { "margin": true, "padding": true }
+	},
+	"render": "file:./render.php",
+	"textdomain": "dublin-painter"
+}
