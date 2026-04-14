@@ -19,14 +19,30 @@
 				{ "slug": "card-border", "color": "#e2e8f0", "name": "Card Border" },
 				{ "slug": "dark-card", "color": "#1e293b", "name": "Dark Card" },
 				{ "slug": "text-primary", "color": "#0f172a", "name": "Text Primary" },
-				{ "slug": "text-secondary", "color": "#64748b", "name": "Text Secondary" },
+				{
+					"slug": "text-secondary",
+					"color": "#64748b",
+					"name": "Text Secondary"
+				},
 				{ "slug": "text-light", "color": "#cbd5e1", "name": "Text Light" },
 				{ "slug": "white", "color": "#ffffff", "name": "White" }
 			],
 			"gradients": [
-				{ "slug": "blue-to-blue-500", "gradient": "linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)", "name": "Blue Gradient" },
-				{ "slug": "blue-to-green", "gradient": "linear-gradient(135deg, #2563eb 0%, #16a34a 100%)", "name": "Blue to Green" },
-				{ "slug": "dark-overlay", "gradient": "linear-gradient(180deg, rgba(15,23,42,0.7) 0%, rgba(15,23,42,0.9) 100%)", "name": "Dark Overlay" }
+				{
+					"slug": "blue-to-blue-500",
+					"gradient": "linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)",
+					"name": "Blue Gradient"
+				},
+				{
+					"slug": "blue-to-green",
+					"gradient": "linear-gradient(135deg, #2563eb 0%, #16a34a 100%)",
+					"name": "Blue to Green"
+				},
+				{
+					"slug": "dark-overlay",
+					"gradient": "linear-gradient(180deg, rgba(15,23,42,0.7) 0%, rgba(15,23,42,0.9) 100%)",
+					"name": "Dark Overlay"
+				}
 			]
 		},
 		"typography": {

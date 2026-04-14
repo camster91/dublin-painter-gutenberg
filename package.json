@@ -1,0 +1,8 @@
+{
+	"name": "dublin-painter-gutenberg",
+	"version": "1.0.0",
+	"type": "commonjs",
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.12"
+	}
+}

@@ -8,5 +8,5 @@
 }
 
 .dp-ba-container {
-	aspect-ratio: var(--dp-ba-ratio, 21/9);
+	aspect-ratio: var(--dp-ba-ratio, 21 / 9);
 }
