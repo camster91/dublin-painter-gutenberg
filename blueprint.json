@@ -1,0 +1,13 @@
+{
+	"$schema": "https://wordpress.github.io/wordpress-playground/schemas/blueprint.json",
+	"preferredVersions": { "php": "8.2", "wp": "6.7" },
+	"features": { "networking": true },
+	"steps": [
+		{ "step": "login", "username": "admin", "password": "password" },
+		{
+			"step": "runPHP",
+			"code": "<?php\nrequire_once '/wordpress/wp-load.php';\nupdate_option('blogname', 'Dublin Painter');\nupdate_option('blogdescription', 'Professional Painting Services in Dublin');\nupdate_option('permalink_structure', '/%postname%/');\n$pages = array('Home','Interior Painting','Exterior Painting','Commercial Painting','About Us','Gallery','Pricing','Contact','Get a Quote');\nforeach ($pages as $title) {\n  if (!get_page_by_title($title)) {\n    wp_insert_post(array('post_title'=>$title,'post_status'=>'publish','post_type'=>'page','post_name'=>sanitize_title($title)));\n  }\n}\n$home = get_page_by_title('Home');\nif ($home) { update_option('show_on_front','page'); update_option('page_on_front',$home->ID); }\necho 'Done.';\n"
+		}
+	],
+	"landingPage": "/wp-admin/"
+}

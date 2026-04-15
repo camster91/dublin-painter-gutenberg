@@ -2,16 +2,23 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "dublin-painter/quote-form",
-	"title": "Quote Form",
-	"description": "Dublin Painter Quote Form block.",
+	"title": "Multi-Step Quote Form",
+	"description": "7-step painting estimate form with real-time price calculation.",
 	"category": "dublin-painter",
 	"icon": "forms",
-	"attributes": {},
+	"attributes": {
+		"formEndpoint": {
+			"type": "string",
+			"default": "https://formspree.io/f/placeholder"
+		}
+	},
 	"supports": {
 		"html": false,
 		"align": ["wide", "full"],
 		"spacing": { "margin": true, "padding": true }
 	},
 	"render": "file:./render.php",
+	"script": "file:./frontend.js",
+	"style": "file:./style.css",
 	"textdomain": "dublin-painter"
 }

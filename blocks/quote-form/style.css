@@ -1,0 +1,267 @@
+/* Quote Form — Front-end styles */
+.dp-quote-form-wrapper {
+	width: 100%;
+}
+
+.dp-quote-form {
+	max-width: 700px;
+	margin: 0 auto;
+	background: var(--wp--preset--color--white, #fff);
+	border-radius: 24px;
+	border: 1px solid var(--wp--preset--color--card-border, #e2e8f0);
+	padding: 40px 32px;
+	box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.15);
+}
+
+.dp-quote-steps {
+	display: flex;
+	gap: 4px;
+	margin-bottom: 32px;
+}
+
+.dp-quote-step {
+	flex: 1;
+	text-align: center;
+	padding: 8px 4px;
+	font-size: 12px;
+	color: var(--wp--preset--color--text-secondary, #64748b);
+	border-bottom: 3px solid var(--wp--preset--color--card-border, #e2e8f0);
+	transition: all 0.3s ease;
+}
+
+.dp-quote-step--active {
+	color: var(--wp--preset--color--brand-blue, #2563eb);
+	border-bottom-color: var(--wp--preset--color--brand-blue, #2563eb);
+	font-weight: 600;
+}
+
+.dp-quote-step-num {
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.dp-quote-step-label {
+	display: block;
+	margin-top: 4px;
+}
+
+.dp-quote-panel {
+	display: none;
+	animation: dp-fade-up 0.3s ease;
+}
+
+.dp-quote-panel--active {
+	display: block;
+}
+
+.dp-quote-panel-title {
+	font-size: 22px;
+	font-weight: 700;
+	margin-bottom: 24px;
+	color: var(--wp--preset--color--brand-dark, #0f172a);
+}
+
+.dp-quote-options {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-bottom: 24px;
+}
+
+.dp-quote-option {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 16px;
+	border: 2px solid var(--wp--preset--color--card-border, #e2e8f0);
+	border-radius: 12px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	font-size: 16px;
+}
+
+.dp-quote-option:hover {
+	border-color: var(--wp--preset--color--brand-blue, #2563eb);
+}
+
+.dp-quote-option input[type="radio"] {
+	width: 20px;
+	height: 20px;
+	accent-color: var(--wp--preset--color--brand-blue, #2563eb);
+}
+
+.dp-quote-option input[type="radio"]:checked + span {
+	color: var(--wp--preset--color--brand-blue, #2563eb);
+	font-weight: 600;
+}
+
+.dp-quote-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 16px 32px;
+	background: var(--wp--preset--color--brand-blue, #2563eb);
+	color: #fff;
+	border: none;
+	border-radius: 16px;
+	font-size: 18px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.dp-quote-btn:hover {
+	background: #1d4ed8;
+}
+
+.dp-quote-btn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.dp-quote-btn-secondary {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px 24px;
+	background: transparent;
+	color: var(--wp--preset--color--text-secondary, #64748b);
+	border: 2px solid var(--wp--preset--color--card-border, #e2e8f0);
+	border-radius: 12px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	text-decoration: none;
+}
+
+.dp-quote-btn-secondary:hover {
+	border-color: var(--wp--preset--color--brand-blue, #2563eb);
+	color: var(--wp--preset--color--brand-blue, #2563eb);
+}
+
+.dp-quote-number-input {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	justify-content: center;
+	margin-bottom: 24px;
+}
+
+.dp-quote-minus,
+.dp-quote-plus {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border: 2px solid var(--wp--preset--color--card-border, #e2e8f0);
+	background: #fff;
+	font-size: 24px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.dp-quote-minus:hover,
+.dp-quote-plus:hover {
+	border-color: var(--wp--preset--color--brand-blue, #2563eb);
+	color: var(--wp--preset--color--brand-blue, #2563eb);
+}
+
+.dp-quote-room-count {
+	width: 60px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+	border: 2px solid var(--wp--preset--color--card-border, #e2e8f0);
+	border-radius: 12px;
+	padding: 12px;
+}
+
+.dp-quote-estimate {
+	text-align: center;
+	padding: 24px;
+	background: #f0fdf4;
+	border: 1px solid #bbf7d0;
+	border-radius: 16px;
+	margin-bottom: 24px;
+}
+
+.dp-quote-estimate-amount {
+	font-size: 48px;
+	font-weight: 800;
+	color: var(--wp--preset--color--brand-green, #16a34a);
+}
+
+.dp-quote-estimate-note {
+	font-size: 13px;
+	color: var(--wp--preset--color--text-secondary, #64748b);
+}
+
+.dp-quote-input {
+	width: 100%;
+	padding: 16px;
+	border: 2px solid var(--wp--preset--color--card-border, #e2e8f0);
+	border-radius: 12px;
+	font-size: 16px;
+	margin-bottom: 12px;
+	transition: border-color 0.2s ease;
+}
+
+.dp-quote-input:focus {
+	outline: none;
+	border-color: var(--wp--preset--color--brand-blue, #2563eb);
+}
+
+.dp-quote-contact-form {
+	margin-bottom: 16px;
+}
+
+.dp-quote-success {
+	text-align: center;
+	padding: 32px;
+}
+
+.dp-quote-success-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	background: var(--wp--preset--color--brand-green, #16a34a);
+	color: #fff;
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 24px;
+}
+
+.dp-quote-success-actions {
+	display: flex;
+	gap: 12px;
+	justify-content: center;
+	margin-top: 24px;
+}
+
+@keyframes dp-fade-up {
+	from {
+		opacity: 0;
+		transform: translateY(16px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 768px) {
+	.dp-quote-form {
+		padding: 24px 16px;
+	}
+	.dp-quote-step-label {
+		display: none;
+	}
+	.dp-quote-success-actions {
+		flex-direction: column;
+	}
+}
