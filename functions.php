@@ -193,9 +193,17 @@ function dublin_painter_shortcode_whatsapp(): string {
 	return get_theme_mod( 'dp_whatsapp', '353871234567' );
 }
 
+/**
+ * Year shortcode for footer copyright.
+ */
+function dublin_painter_shortcode_year(): string {
+	return (string) gmdate( 'Y' );
+}
+
 add_shortcode( 'dp_phone', 'dublin_painter_shortcode_phone' );
 add_shortcode( 'dp_email', 'dublin_painter_shortcode_email' );
 add_shortcode( 'dp_whatsapp', 'dublin_painter_shortcode_whatsapp' );
+add_shortcode( 'dp_year', 'dublin_painter_shortcode_year' );
 
 /**
  * JSON-LD LocalBusiness structured data.

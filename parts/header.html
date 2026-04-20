@@ -1,6 +1,6 @@
 <!-- Template Part: Header -->
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","right":"var:preset|spacing|5","bottom":"0","left":"var:preset|spacing|5"}},"border":{"bottom":{"color":"var:preset|color|card-border","width":"1px"}},"position":{"type":"sticky","top":"0"}},"backgroundColor":"white","layout":{"type":"constrained","contentSize":"1200px"}} -->
-<div class="wp-block-group alignfull has-white-background-color has-background" style="border-bottom-color:var(--wp--preset--color--card-border);border-bottom-width:1px;padding-top:0;padding-right:var(--wp--preset--spacing--5);padding-bottom:0;padding-left:var(--wp--preset--spacing--5)">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","right":"var:preset|spacing|5","bottom":"0","left":"var:preset|spacing|5"}},"border":{"bottom":{"color":"var:preset|color|card-border","width":"1px"}},"position":{"type":"sticky","top":"0"}},"backgroundColor":"white","layout":{"type":"constrained","contentSize":"1200px"},"className":"dp-glass-header"} -->
+<div class="wp-block-group alignfull dp-glass-header has-white-background-color has-background" style="border-bottom-color:var(--wp--preset--color--card-border);border-bottom-width:1px;padding-top:0;padding-right:var(--wp--preset--spacing--5);padding-bottom:0;padding-left:var(--wp--preset--spacing--5)">
 
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|4","bottom":"var:preset|spacing|4"}}}} -->
 	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4)">
@@ -19,7 +19,39 @@
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:navigation {"ref":0,"overlayMenu":"mobile","layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"blockGap":"var:preset|spacing|5"}}} /-->
+		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"},"style":{"spacing":{"blockGap":"var:preset|spacing|4"}}} -->
+		<div class="wp-block-group">
+
+			<!-- wp:navigation {"ref":0,"overlayMenu":"mobile","layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"blockGap":"var:preset|spacing|5"}}} /-->
+
+			<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->
+			<div class="wp-block-group">
+				<!-- wp:paragraph {"align":"right","style":{"typography":{"fontSize":"10px","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"text-secondary"} -->
+				<p class="has-text-align-right has-text-secondary-color" style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin:0">Call for a free estimate</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"align":"right","style":{"typography":{"fontSize":"16px","fontWeight":"700"}}} -->
+				<p class="has-text-align-right" style="font-size:16px;font-weight:700;margin:0">01 234 5678</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- wp:html {"placeholder":"Dark mode toggle"} -->
+			<button class="dp-dark-toggle" aria-label="Toggle dark mode" onclick="document.body.classList.toggle('dark-mode');localStorage.setItem('dp-dark',document.body.classList.contains('dark-mode'))">
+				<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+				<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+			</button>
+			<!-- /wp:html -->
+
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons">
+				<!-- wp:button {"backgroundColor":"brand-green","textColor":"white","style":{"border":{"radius":"9999px"},"spacing":{"padding":{"top":"8px","right":"20px","bottom":"8px","left":"20px"}},"typography":{"fontSize":"14px","fontWeight":"600"}}} -->
+				<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-brand-green-background-color has-text-color has-background wp-element-button" href="tel:012345678" style="border-radius:9999px;padding-top:8px;padding-right:20px;padding-bottom:8px;padding-left:20px;font-size:14px;font-weight:600">📞 Call</a></div>
+				<!-- /wp:button -->
+			</div>
+			<!-- /wp:buttons -->
+
+		</div>
+		<!-- /wp:group -->
 
 	</div>
 	<!-- /wp:group -->

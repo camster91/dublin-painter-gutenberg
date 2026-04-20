@@ -25,6 +25,8 @@ function dublin_painter_register_patterns(): void {
 		'gallery-grid',
 		'about-intro',
 		'stats-bar',
+		'why-choose-us',
+		'awards',
 	);
 
 	foreach ( $patterns as $pattern ) {
