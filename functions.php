@@ -248,3 +248,7 @@ function dublin_painter_analytics(): void {
 	}
 }
 add_action( 'wp_head', 'dublin_painter_analytics' );
+/**
+ * Register block patterns.
+ */
+require get_stylesheet_directory() . '/patterns.php';

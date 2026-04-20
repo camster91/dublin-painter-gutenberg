@@ -12,20 +12,56 @@
 			"defaultPalette": false,
 			"defaultGradientPresets": false,
 			"palette": [
-				{ "slug": "brand-blue", "color": "#2563eb", "name": "Brand Blue" },
-				{ "slug": "brand-dark", "color": "#0f172a", "name": "Brand Dark" },
-				{ "slug": "brand-green", "color": "#16a34a", "name": "Brand Green" },
-				{ "slug": "brand-light", "color": "#f8fafc", "name": "Brand Light" },
-				{ "slug": "card-border", "color": "#e2e8f0", "name": "Card Border" },
-				{ "slug": "dark-card", "color": "#1e293b", "name": "Dark Card" },
-				{ "slug": "text-primary", "color": "#0f172a", "name": "Text Primary" },
+				{
+					"slug": "brand-blue",
+					"color": "#2563eb",
+					"name": "Brand Blue"
+				},
+				{
+					"slug": "brand-dark",
+					"color": "#0f172a",
+					"name": "Brand Dark"
+				},
+				{
+					"slug": "brand-green",
+					"color": "#16a34a",
+					"name": "Brand Green"
+				},
+				{
+					"slug": "brand-light",
+					"color": "#f8fafc",
+					"name": "Brand Light"
+				},
+				{
+					"slug": "card-border",
+					"color": "#e2e8f0",
+					"name": "Card Border"
+				},
+				{
+					"slug": "dark-card",
+					"color": "#1e293b",
+					"name": "Dark Card"
+				},
+				{
+					"slug": "text-primary",
+					"color": "#0f172a",
+					"name": "Text Primary"
+				},
 				{
 					"slug": "text-secondary",
 					"color": "#64748b",
 					"name": "Text Secondary"
 				},
-				{ "slug": "text-light", "color": "#cbd5e1", "name": "Text Light" },
-				{ "slug": "white", "color": "#ffffff", "name": "White" }
+				{
+					"slug": "text-light",
+					"color": "#cbd5e1",
+					"name": "Text Light"
+				},
+				{
+					"slug": "white",
+					"color": "#ffffff",
+					"name": "White"
+				}
 			],
 			"gradients": [
 				{
@@ -69,13 +105,41 @@
 				}
 			],
 			"fontSizes": [
-				{ "slug": "small", "size": "14px", "name": "Small" },
-				{ "slug": "normal", "size": "16px", "name": "Normal" },
-				{ "slug": "medium", "size": "20px", "name": "Medium" },
-				{ "slug": "large", "size": "28px", "name": "Large" },
-				{ "slug": "x-large", "size": "36px", "name": "XL" },
-				{ "slug": "xx-large", "size": "48px", "name": "2XL" },
-				{ "slug": "huge", "size": "64px", "name": "Huge" }
+				{
+					"slug": "small",
+					"size": "14px",
+					"name": "Small"
+				},
+				{
+					"slug": "normal",
+					"size": "16px",
+					"name": "Normal"
+				},
+				{
+					"slug": "medium",
+					"size": "20px",
+					"name": "Medium"
+				},
+				{
+					"slug": "large",
+					"size": "28px",
+					"name": "Large"
+				},
+				{
+					"slug": "x-large",
+					"size": "36px",
+					"name": "XL"
+				},
+				{
+					"slug": "xx-large",
+					"size": "48px",
+					"name": "2XL"
+				},
+				{
+					"slug": "huge",
+					"size": "64px",
+					"name": "Huge"
+				}
 			],
 			"fontStyle": true,
 			"fontWeight": true,
@@ -94,16 +158,56 @@
 				"steps": 0
 			},
 			"spacingSizes": [
-				{ "slug": "1", "size": "4px", "name": "4" },
-				{ "slug": "2", "size": "8px", "name": "8" },
-				{ "slug": "3", "size": "12px", "name": "12" },
-				{ "slug": "4", "size": "16px", "name": "16" },
-				{ "slug": "5", "size": "24px", "name": "24" },
-				{ "slug": "6", "size": "32px", "name": "32" },
-				{ "slug": "7", "size": "48px", "name": "48" },
-				{ "slug": "8", "size": "64px", "name": "64" },
-				{ "slug": "9", "size": "80px", "name": "80" },
-				{ "slug": "10", "size": "96px", "name": "96" }
+				{
+					"slug": "1",
+					"size": "4px",
+					"name": "4"
+				},
+				{
+					"slug": "2",
+					"size": "8px",
+					"name": "8"
+				},
+				{
+					"slug": "3",
+					"size": "12px",
+					"name": "12"
+				},
+				{
+					"slug": "4",
+					"size": "16px",
+					"name": "16"
+				},
+				{
+					"slug": "5",
+					"size": "24px",
+					"name": "24"
+				},
+				{
+					"slug": "6",
+					"size": "32px",
+					"name": "32"
+				},
+				{
+					"slug": "7",
+					"size": "48px",
+					"name": "48"
+				},
+				{
+					"slug": "8",
+					"size": "64px",
+					"name": "64"
+				},
+				{
+					"slug": "9",
+					"size": "80px",
+					"name": "80"
+				},
+				{
+					"slug": "10",
+					"size": "96px",
+					"name": "96"
+				}
 			]
 		},
 		"border": {
@@ -273,11 +377,67 @@
 		}
 	},
 	"customTemplates": [
-		{ "name": "blank", "title": "Blank", "postTypes": ["page", "post"] },
-		{ "name": "no-title", "title": "No Title", "postTypes": ["page", "post"] }
+		{
+			"name": "home",
+			"title": "Home",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "interior",
+			"title": "Interior Painting",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "exterior",
+			"title": "Exterior Painting",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "commercial",
+			"title": "Commercial Painting",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "about",
+			"title": "About Us",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "gallery",
+			"title": "Gallery",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "pricing",
+			"title": "Pricing",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "contact",
+			"title": "Contact",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "blank",
+			"title": "Blank",
+			"postTypes": ["page", "post"]
+		},
+		{
+			"name": "no-title",
+			"title": "No Title",
+			"postTypes": ["page", "post"]
+		}
 	],
 	"templateParts": [
-		{ "name": "header", "title": "Header", "area": "header" },
-		{ "name": "footer", "title": "Footer", "area": "footer" }
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		}
 	]
 }
