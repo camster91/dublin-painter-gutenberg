@@ -102,144 +102,8 @@ body.dark-mode .dp-glass-card {
 }
 
 /* ============================================
- * DARK MODE
+ * SERVICE AREA PILLS
  * ============================================ */
-body.dark-mode {
-	background-color: #0f172a;
-	color: #f8fafc;
-}
-
-/* Dark mode overrides for key elements */
-body.dark-mode .wp-block-cover {
-	color: #f8fafc;
-}
-
-body.dark-mode .wp-block-group.has-white-background-color {
-	background-color: #1e293b !important;
-}
-
-body.dark-mode .wp-block-group.has-brand-light-background-color,
-body.dark-mode
-	.wp-block-group[style*="background-color: var(--wp--preset--color--brand-light)"] {
-	background-color: #0f172a !important;
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6 {
-	color: #f8fafc;
-}
-
-body.dark-mode p,
-body.dark-mode li {
-	color: #cbd5e1;
-}
-
-body.dark-mode .wp-block-table tbody tr {
-	color: #e2e8f0;
-}
-
-body.dark-mode .wp-block-table thead tr {
-	background-color: #1e293b;
-}
-
-body.dark-mode .wp-block-group[style*="border-top-color: rgb(226, 232, 240)"],
-body.dark-mode .wp-block-group[style*="border-top-color:#e2e8f0"] {
-	border-top-color: #334155 !important;
-}
-
-body.dark-mode .wp-block-column[style*="background-color: white"],
-body.dark-mode .wp-block-column[style*="background-color:#ffffff"],
-body.dark-mode .wp-block-column.has-white-background-color {
-	background-color: #1e293b !important;
-	border-color: #334155 !important;
-}
-
-body.dark-mode .wp-block-group.alignfull[style*="background-color: white"],
-body.dark-mode .wp-block-group.alignfull[style*="background-color:#ffffff"] {
-	background-color: #1e293b !important;
-}
-
-body.dark-mode .dp-service-areas p[style*="color:#ffffff"] {
-	background-color: rgba(30, 41, 59, 0.8) !important;
-	border-color: #475569 !important;
-}
-
-body.dark-mode .wp-block-buttons .wp-block-button__link {
-	border-color: #475569 !important;
-}
-
-/* Dark mode toggle button */
-.dp-dark-toggle {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	border: 2px solid #e2e8f0;
-	background: transparent;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	padding: 0;
-	line-height: 1;
-}
-
-.dp-dark-toggle:hover {
-	background: #f1f5f9;
-	border-color: #2563eb;
-}
-
-.dp-dark-toggle svg {
-	width: 20px;
-	height: 20px;
-	fill: #64748b;
-	transition: fill 0.3s ease;
-}
-
-.dp-dark-toggle:hover svg {
-	fill: #2563eb;
-}
-
-body.dark-mode .dp-dark-toggle {
-	border-color: #475569;
-	background: #1e293b;
-}
-
-body.dark-mode .dp-dark-toggle:hover {
-	background: #334155;
-	border-color: #2563eb;
-}
-
-body.dark-mode .dp-dark-toggle svg {
-	fill: #cbd5e1;
-}
-
-body.dark-mode .dp-dark-toggle:hover svg {
-	fill: #2563eb;
-}
-
-/* Hide sun icon when in light mode, hide moon icon when in dark mode */
-.dp-dark-toggle .icon-sun {
-	display: none;
-}
-
-body.dark-mode .dp-dark-toggle .icon-sun {
-	display: inline-block;
-}
-
-body.dark-mode .dp-dark-toggle .icon-moon {
-	display: none;
-}
-
-/* ============================================
- * BLOCK PATTERN OVERRIDES
- * ============================================ */
-
-/* Service area pills */
 .dp-service-areas p {
 	display: inline-flex;
 	align-items: center;
@@ -449,7 +313,7 @@ body.dark-mode .dp-hero-image-frame {
 }
 
 /* ============================================
- * TESTIMONIALS — GLASS CARDS
+ * TESTIMONIALS GLASS CARDS
  * ============================================ */
 .dp-testimonial-card {
 	background: rgba(255, 255, 255, 0.6);
@@ -499,7 +363,7 @@ body.dark-mode .dp-testimonial-card::before {
 }
 
 /* ============================================
- * SERVICE CARDS — HOVER EFFECTS
+ * SERVICE CARDS HOVER EFFECTS
  * ============================================ */
 .dp-service-card img,
 .dp-service-card .wp-block-image img {
@@ -643,6 +507,140 @@ body.dark-mode .dp-glass-header {
 .dp-reveal.dp-visible {
 	opacity: 1;
 	transform: translateY(0);
+}
+
+/* ============================================
+ * DARK MODE
+ * ============================================ */
+body.dark-mode {
+	background-color: #0f172a;
+	color: #f8fafc;
+}
+
+/* Dark mode overrides for key elements */
+body.dark-mode .wp-block-cover {
+	color: #f8fafc;
+}
+
+body.dark-mode .wp-block-group.has-white-background-color {
+	background-color: #1e293b !important;
+}
+
+body.dark-mode .wp-block-group.has-brand-light-background-color,
+body.dark-mode
+	.wp-block-group[style*="background-color: var(--wp--preset--color--brand-light)"] {
+	background-color: #0f172a !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+	color: #f8fafc;
+}
+
+body.dark-mode p,
+body.dark-mode li {
+	color: #cbd5e1;
+}
+
+body.dark-mode .wp-block-table tbody tr {
+	color: #e2e8f0;
+}
+
+body.dark-mode .wp-block-table thead tr {
+	background-color: #1e293b;
+}
+
+body.dark-mode .wp-block-group[style*="border-top-color: rgb(226, 232, 240)"],
+body.dark-mode .wp-block-group[style*="border-top-color:#e2e8f0"] {
+	border-top-color: #334155 !important;
+}
+
+body.dark-mode .wp-block-column[style*="background-color: white"],
+body.dark-mode .wp-block-column[style*="background-color:#ffffff"],
+body.dark-mode .wp-block-column.has-white-background-color {
+	background-color: #1e293b !important;
+	border-color: #334155 !important;
+}
+
+body.dark-mode .wp-block-group.alignfull[style*="background-color: white"],
+body.dark-mode .wp-block-group.alignfull[style*="background-color:#ffffff"] {
+	background-color: #1e293b !important;
+}
+
+body.dark-mode .dp-service-areas p[style*="color:#ffffff"] {
+	background-color: rgba(30, 41, 59, 0.8) !important;
+	border-color: #475569 !important;
+}
+
+body.dark-mode .wp-block-buttons .wp-block-button__link {
+	border-color: #475569 !important;
+}
+
+/* Dark mode toggle button */
+.dp-dark-toggle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid #e2e8f0;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	padding: 0;
+	line-height: 1;
+}
+
+.dp-dark-toggle:hover {
+	background: #f1f5f9;
+	border-color: #2563eb;
+}
+
+.dp-dark-toggle svg {
+	width: 20px;
+	height: 20px;
+	fill: #64748b;
+	transition: fill 0.3s ease;
+}
+
+.dp-dark-toggle:hover svg {
+	fill: #2563eb;
+}
+
+body.dark-mode .dp-dark-toggle {
+	border-color: #475569;
+	background: #1e293b;
+}
+
+body.dark-mode .dp-dark-toggle:hover {
+	background: #334155;
+	border-color: #2563eb;
+}
+
+body.dark-mode .dp-dark-toggle svg {
+	fill: #cbd5e1;
+}
+
+body.dark-mode .dp-dark-toggle:hover svg {
+	fill: #2563eb;
+}
+
+/* Hide sun icon when in light mode, hide moon icon when in dark mode */
+.dp-dark-toggle .icon-sun {
+	display: none;
+}
+
+body.dark-mode .dp-dark-toggle .icon-sun {
+	display: inline-block;
+}
+
+body.dark-mode .dp-dark-toggle .icon-moon {
+	display: none;
 }
 
 /* ============================================
