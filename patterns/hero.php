@@ -9,8 +9,8 @@ return array(
 	'title'       => __( 'Hero Section', 'dublin-painter' ),
 	'description' => __( 'Split hero with animated mesh background, gradient text, and side-by-side image', 'dublin-painter' ),
 	'categories'  => array( 'dublin-painter' ),
-	'content'     => '<!-- wp:group {"align":"full","layout":{"type":"constrained","contentSize":"1200px"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"backgroundColor":"brand-light","className":"dp-hero-mesh"} -->
-<div class="wp-block-group alignfull dp-hero-mesh has-brand-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)">
+	'content'     => '<!-- wp:group {"align":"full","layout":{"type":"constrained","contentSize":"1200px"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"backgroundColor":"brand-dark","className":"dp-hero-mesh"} -->
+<div class="wp-block-group alignfull dp-hero-mesh has-brand-dark-background-color has-background" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)">
 
 <!-- Animated mesh gradient orbs (decorative, via CSS) -->
 <div class="dp-orb dp-orb-blue" aria-hidden="true"></div>
@@ -18,8 +18,8 @@ return array(
 
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|5"}}},"className":"dp-reveal"} -->
 <div class="wp-block-group dp-reveal" style="margin-bottom:var(--wp--preset--spacing--5)">
-	<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#f8fafc"},"border":{"radius":"9999px"},"spacing":{"padding":{"top":"var:preset|spacing|2","right":"var:preset|spacing|4","bottom":"var:preset|spacing|2","left":"var:preset|spacing|4"}}},"backgroundColor":"brand-blue","fontSize":"small"} -->
-	<p class="has-text-align-center has-brand-blue-background-color has-background has-small-font-size" style="border-radius:9999px;padding-top:var(--wp--preset--spacing--2);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--2);padding-left:var(--wp--preset--spacing--4);color:#f8fafc">⭐ 4.9/5 Average Rating &bull; 10+ Years Experience</p>
+	<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#f8fafc"},"border":{"radius":"9999px"},"spacing":{"padding":{"top":"var:preset|spacing|2","right":"var:preset|spacing|4","bottom":"var:preset|spacing|2","left":"var:preset|spacing|4"}},"backgroundColor":"brand-blue"},"fontSize":"small"} -->
+	<p class="has-text-align-center has-brand-blue-background-color has-background has-small-font-size" style="border-radius:9999px;padding-top:var(--wp--preset--spacing--2);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--2);padding-left:var(--wp--preset--spacing--4);color:#f8fafc">⭐ 4.9/5 Average Rating &amp;bull; 10+ Years Experience</p>
 	<!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -30,13 +30,21 @@ return array(
 <!-- Text Column -->
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%">
-<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"clamp(2.5rem,5vw,4rem)","fontWeight":"800","lineHeight":"1.1","letterSpacing":"-2px"}}} -->
-<h1 class="wp-block-heading" style="font-size:clamp(2.5rem,5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-2px">Top-Rated Painters in Dublin —<br><span class="dp-gradient-text">Quotes in 24 Hours</span></h1>
+<!-- wp:heading {"level":1,"style":{"color":{"text":"#f8fafc"},"typography":{"fontSize":"clamp(2.5rem,5vw,4rem)","fontWeight":"800","lineHeight":"1.1","letterSpacing":"-1px"}}} -->
+<h1 class="wp-block-heading" style="color:#f8fafc;font-size:clamp(2.5rem,5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-1px">Top-Rated Painters in Dublin.<br><span class="dp-gradient-text">Fixed Quotes in 24h.</span></h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"color":{"text":"#64748b"},"typography":{"fontSize":"20px","lineHeight":"1.6"}}} -->
-<p style="color:#64748b;font-size:20px;line-height:1.6">Transform your home with premium paints and meticulous prep work. Fully insured and trusted by Dublin homeowners for over 10 years.</p>
+<!-- wp:paragraph {"style":{"color":{"text":"#94a3b8"},"typography":{"fontSize":"20px","lineHeight":"1.6"}}} -->
+<p style="color:#94a3b8;font-size:20px;line-height:1.6">Transform your home with premium paints and meticulous prep work. Fully insured and trusted by Dublin homeowners for over 10 years.</p>
 <!-- /wp:paragraph -->
+
+<!-- wp:list {"style":{"color":{"text":"#cbd5e1"},"typography":{"fontSize":"18px","fontWeight":"600"}}} -->
+<ul style="color:#cbd5e1;font-size:18px;font-weight:600">
+<li>✅ 100% Fixed Quotes — No hidden extras</li>
+<li>✅ Fully Insured &amp; Safe Pass Certified</li>
+<li>✅ Premium Dulux &amp; Fleetwood paints only</li>
+</ul>
+<!-- /wp:list -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|6"},"blockGap":{"top":"var:preset|spacing|3","left":"var:preset|spacing|4"}}}} -->
 <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--6)">
@@ -45,8 +53,8 @@ return array(
 <div class="wp-block-button"><a class="wp-block-button__link has-white-color has-brand-green-background-color has-text-color has-background wp-element-button" href="tel:012345678" style="border-radius:16px;padding-top:16px;padding-right:32px;padding-bottom:16px;padding-left:32px;font-size:18px;font-weight:700">📞 Call 01 234 5678</a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"style":{"border":{"radius":"16px","color":"#e2e8f0","width":"2px"},"spacing":{"padding":{"top":"16px","right":"32px","bottom":"16px","left":"32px"}},"typography":{"fontSize":"18px","fontWeight":"700"},"color":{"text":"brand-dark"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-brand-dark-color has-text-color wp-element-button" href="#quote-section" style="border-radius:16px;border-color:#e2e8f0;border-width:2px;padding-top:16px;padding-right:32px;padding-bottom:16px;padding-left:32px;font-size:18px;font-weight:700">Get Free Online Quote</a></div>
+<!-- wp:button {"style":{"border":{"radius":"16px","color":"#64748b","width":"2px"},"spacing":{"padding":{"top":"16px","right":"32px","bottom":"16px","left":"32px"}},"typography":{"fontSize":"18px","fontWeight":"700"},"color":{"text":"#f8fafc"}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-text-color wp-element-button" href="#quote-section" style="border-radius:16px;border-color:#64748b;border-width:2px;padding-top:16px;padding-right:32px;padding-bottom:16px;padding-left:32px;font-size:18px;font-weight:700;color:#f8fafc">Get Free Online Quote</a></div>
 <!-- /wp:button -->
 
 </div>

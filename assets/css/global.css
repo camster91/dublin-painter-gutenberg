@@ -71,6 +71,29 @@ a:hover {
 }
 
 /* ============================================
+ * SECTION HEADING UNDERLINE BAR
+ * ============================================ */
+h2.wp-block-heading:after {
+	content: "";
+	display: block;
+	width: 80px;
+	height: 4px;
+	background: linear-gradient(90deg, #2563eb, #16a34a);
+	border-radius: 9999px;
+	margin: 16px auto 0;
+}
+
+/* Remove underline bar from hero headings */
+h1:after {
+	display: none;
+}
+
+.dp-hero-mesh h1:after,
+.dp-hero-mesh h2:after {
+	display: none;
+}
+
+/* ============================================
  * GLASSMORPHISM UTILITIES
  * ============================================ */
 .dp-glass {
@@ -118,12 +141,13 @@ body.dark-mode .dp-glass-card {
 	background-color: rgba(37, 99, 235, 0.15) !important;
 }
 
-/* Process steps */
+/* ============================================
+ * PROCESS TIMELINE
+ * ============================================ */
 .dp-process-step {
 	text-align: center;
 }
 
-/* Process timeline animated line */
 .dp-process-line {
 	position: relative;
 }
@@ -384,6 +408,74 @@ body.dark-mode .dp-testimonial-card::before {
 }
 
 /* ============================================
+ * PRICING TABLE ENHANCEMENT
+ * ============================================ */
+.wp-block-table {
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.wp-block-table table {
+	border-collapse: separate;
+	border-spacing: 0;
+	border-radius: 16px;
+	border: 1px solid #e2e8f0;
+}
+
+body.dark-mode .wp-block-table table {
+	border-color: #334155;
+}
+
+.wp-block-table thead {
+	background: linear-gradient(135deg, #2563eb, #1d4ed8);
+	color: #ffffff;
+}
+
+.wp-block-table thead th {
+	color: #ffffff;
+	font-weight: 700;
+	padding: 16px 20px;
+	border: none;
+	text-align: left;
+}
+
+.wp-block-table tbody td {
+	padding: 14px 20px;
+	border-bottom: 1px solid #e2e8f0;
+}
+
+body.dark-mode .wp-block-table tbody td {
+	border-bottom-color: #334155;
+}
+
+.wp-block-table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.wp-block-table tbody tr:hover {
+	background-color: rgba(37, 99, 235, 0.04);
+}
+
+body.dark-mode .wp-block-table tbody tr:hover {
+	background-color: rgba(37, 99, 235, 0.1);
+}
+
+.wp-block-table tbody tr:nth-child(even) {
+	background-color: #f8fafc;
+}
+
+body.dark-mode .wp-block-table tbody tr:nth-child(even) {
+	background-color: #1e293b;
+}
+
+/* ============================================
+ * FAQ SECTION ENHANCEMENT
+ * ============================================ */
+.wp-block-separator.has-card-border-color {
+	opacity: 0.5;
+}
+
+/* ============================================
  * BUTTON HOVER LIFT
  * ============================================ */
 .wp-block-button__link,
@@ -400,8 +492,13 @@ body.dark-mode .dp-testimonial-card::before {
 	box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
 }
 
+/* Green button specific hover */
+.wp-block-button__link.has-brand-green-background-color:hover {
+	box-shadow: 0 6px 20px rgba(22, 163, 74, 0.3);
+}
+
 /* ============================================
- * WHY CHOOSE US / AWARDS CARDS
+ * WHY CHOOSE US / AWARDS / TRUST BADGES CARDS
  * ============================================ */
 .dp-feature-icon {
 	width: 56px;
@@ -420,7 +517,8 @@ body.dark-mode .dp-testimonial-card::before {
 .dp-feature-icon svg {
 	width: 28px;
 	height: 28px;
-	fill: #2563eb;
+	stroke: #2563eb;
+	fill: none;
 }
 
 .dp-feature-card:hover .dp-feature-icon {
@@ -551,7 +649,7 @@ body.dark-mode .wp-block-table tbody tr {
 }
 
 body.dark-mode .wp-block-table thead tr {
-	background-color: #1e293b;
+	background: linear-gradient(135deg, #1d4ed8, #1e40af);
 }
 
 body.dark-mode .wp-block-group[style*="border-top-color: rgb(226, 232, 240)"],

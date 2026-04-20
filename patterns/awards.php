@@ -13,7 +13,7 @@ return array(
 <div class="wp-block-group alignfull has-white-background-color has-background" style="border-top-color:var(--wp--preset--color--card-border);border-top-width:1px;padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)">
 
 <!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontSize":"36px","fontWeight":"800"}}} -->
-<h2 class="wp-block-heading has-text-align-center" style="font-size:36px;font-weight:800">Our Awards &amp; Recognitions</h2>
+<h2 class="wp-block-heading has-text-align-center" style="font-size:clamp(2rem,5vw,3rem);font-weight:800">Our Awards &amp; Recognitions</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns {"style":{"spacing":{"margin":{"top":"var:preset|spacing|7"},"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|5"}}}} -->

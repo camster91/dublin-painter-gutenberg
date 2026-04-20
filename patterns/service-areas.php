@@ -30,8 +30,8 @@ return array(
 	'content'     => '<!-- wp:group {"align":"full","backgroundColor":"brand-dark","layout":{"type":"constrained","contentSize":"800px"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}},"border":{"top":{"color":"#334155","width":"1px"}}}} -->
 <div class="wp-block-group alignfull has-brand-dark-background-color has-background" style="border-top-color:#334155;border-top-width:1px;padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)">
 
-<!-- wp:heading {"textAlign":"center","level":2,"style":{"color":{"text":"#ffffff"},"typography":{"fontSize":"36px","fontWeight":"800"}}} -->
-<h2 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:36px;font-weight:800">Proudly Serving Dublin &amp; Beyond</h2>
+<!-- wp:heading {"textAlign":"center","level":2,"style":{"color":{"text":"#ffffff"},"typography":{"fontSize":"clamp(2rem,5vw,3rem)","fontWeight":"800"}}} -->
+<h2 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:clamp(2rem,5vw,3rem);font-weight:800">Proudly Serving Dublin &amp; Beyond</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","style":{"color":{"text":"#94a3b8"},"typography":{"fontSize":"18px"}}} -->

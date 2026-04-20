@@ -12,8 +12,8 @@ return array(
 	'content'     => '<!-- wp:group {"align":"full","backgroundColor":"brand-light","layout":{"type":"constrained","contentSize":"1200px"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-group alignfull has-brand-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)">
 
-<!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontSize":"36px","fontWeight":"800"}}} -->
-<h2 class="wp-block-heading has-text-align-center" style="font-size:36px;font-weight:800">Loved by Dublin Homeowners &amp; Businesses</h2>
+<!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontSize":"clamp(2rem,5vw,3rem)","fontWeight":"800"}}} -->
+<h2 class="wp-block-heading has-text-align-center" style="font-size:clamp(2rem,5vw,3rem);font-weight:800">What Your Neighbors Are Saying</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns {"style":{"spacing":{"margin":{"top":"var:preset|spacing|7"},"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|5"}}}} -->
@@ -25,10 +25,10 @@ return array(
 <p style="color:#f59e0b;font-size:13px;line-height:1">⭐⭐⭐⭐⭐</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"16px","lineHeight":"1.6","fontStyle":"italic"},"color":{"text":"#334155"}},"spacing":{"style":{"margin":{"top":"var:preset|spacing|4","bottom":"var:preset|spacing|5"}}}} -->
-<p style="color:#334155;font-size:16px;line-height:1.6;font-style:italic;margin-top:var(--wp--preset--spacing--4);margin-bottom:var(--wp--preset--spacing--5)">"Their dustless sanding system is pure magic. Not a single spec of dust on my sofa. Perfect finish on our living room."</p>
+<p style="color:#334155;font-size:16px;line-height:1.6;font-style:italic;margin-top:var(--wp--preset--spacing--4);margin-bottom:var(--wp--preset--spacing--5)">The team painted our entire exterior in Blackrock. They were fast, clean, and the fixed price quote was exactly what we paid.</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"16px","fontWeight":"700"}}} -->
-<h4 style="font-size:16px;font-weight:700">Emma Walsh</h4>
+<h4 style="font-size:16px;font-weight:700">Mark T.</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|brand-blue)"},"typography":{"fontSize":"13px","fontWeight":"600"}}} -->
 <p style="color:var(--wp--preset--color--brand-blue);font-size:13px;font-weight:600">Homeowner, Blackrock</p>
@@ -42,10 +42,10 @@ return array(
 <p style="color:#f59e0b;font-size:13px;line-height:1">⭐⭐⭐⭐⭐</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"16px","lineHeight":"1.6","fontStyle":"italic"},"color":{"text":"#334155"}},"spacing":{"style":{"margin":{"top":"var:preset|spacing|4","bottom":"var:preset|spacing|5"}}}} -->
-<p style="color:#334155;font-size:16px;line-height:1.6;font-style:italic;margin-top:var(--wp--preset--spacing--4);margin-bottom:var(--wp--preset--spacing--5)">"The elastomeric paint they used repels the Dublin rain completely. Our house looks brand new after 2 years."</p>
+<p style="color:#334155;font-size:16px;line-height:1.6;font-style:italic;margin-top:var(--wp--preset--spacing--4);margin-bottom:var(--wp--preset--spacing--5)">Spotless cleanup every single day. They managed the interior painting of our 3-bed semi without any hassle. Highly recommended.</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"16px","fontWeight":"700"}}} -->
-<h4 style="font-size:16px;font-weight:700">Niall O\'Shea</h4>
+<h4 style="font-size:16px;font-weight:700">Sarah M.</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|brand-blue)"},"typography":{"fontSize":"13px","fontWeight":"600"}}} -->
 <p style="color:var(--wp--preset--color--brand-blue);font-size:13px;font-weight:600">Homeowner, Clontarf</p>
@@ -59,13 +59,13 @@ return array(
 <p style="color:#f59e0b;font-size:13px;line-height:1">⭐⭐⭐⭐⭐</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"16px","lineHeight":"1.6","fontStyle":"italic"},"color":{"text":"#334155"}},"spacing":{"style":{"margin":{"top":"var:preset|spacing|4","bottom":"var:preset|spacing|5"}}}} -->
-<p style="color:#334155;font-size:16px;line-height:1.6;font-style:italic;margin-top:var(--wp--preset--spacing--4);margin-bottom:var(--wp--preset--spacing--5)">"They painted our 4-story office building over the weekend. Our staff returned Monday to a brand new space with zero fumes."</p>
+<p style="color:#334155;font-size:16px;line-height:1.6;font-style:italic;margin-top:var(--wp--preset--spacing--4);margin-bottom:var(--wp--preset--spacing--5)">Fantastic job on our hallway and stairs woodwork. It looks brand new. Very professional and polite crew.</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"16px","fontWeight":"700"}}} -->
-<h4 style="font-size:16px;font-weight:700">Sarah Jenkins</h4>
+<h4 style="font-size:16px;font-weight:700">David K.</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|brand-blue)"},"typography":{"fontSize":"13px","fontWeight":"600"}}} -->
-<p style="color:var(--wp--preset--color--brand-blue);font-size:13px;font-weight:600">Facilities Manager</p>
+<p style="color:var(--wp--preset--color--brand-blue);font-size:13px;font-weight:600">Homeowner</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
