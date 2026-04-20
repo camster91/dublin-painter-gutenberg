@@ -15,7 +15,7 @@ return array(
 <div class="wp-block-group alignfull has-brand-dark-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)">
 
 	<!-- wp:heading {"textAlign":"center","level":1,"style":{"color":{"text":"#ffffff"},"typography":{"fontSize":"48px","fontWeight":"800"}}} -->
-	<h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:48px;font-weight:800">Our <span style="color:var(--wp--preset--color--brand-blue)">Work</span></h1>
+	<h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:clamp(2.5rem,6vw,3.5rem);font-weight:800">Our <span style="color:var(--wp--preset--color--brand-blue)">Work</span></h1>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#94a3b8"},"typography":{"fontSize":"18px"}}} -->

@@ -18,7 +18,7 @@ return array(
 <div class="wp-block-group">
 
 	<!-- wp:heading {"textAlign":"center","level":1,"style":{"color":{"text":"#ffffff"},"typography":{"fontSize":"64px","fontWeight":"800","lineHeight":"1.1"}}} -->
-	<h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:64px;font-weight:800;line-height:1.1">Professional <span style="color:var(--wp--preset--color--brand-blue)">Interior Painting</span></h1>
+	<h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:clamp(2.5rem,6vw,4rem);font-weight:800;line-height:1.1">Professional <span style="color:var(--wp--preset--color--brand-blue)">Interior Painting</span></h1>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#cbd5e1"},"typography":{"fontSize":"20px","lineHeight":"1.7"}}} -->

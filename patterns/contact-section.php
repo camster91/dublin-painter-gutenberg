@@ -15,7 +15,7 @@ return array(
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)">
 
 	<!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontSize":"36px","fontWeight":"800"}}} -->
-	<h2 class="wp-block-heading has-text-align-center" style="font-size:36px;font-weight:800">Get in <span style="color:var(--wp--preset--color--brand-blue)">Touch</span></h2>
+	<h2 class="wp-block-heading has-text-align-center" style="font-size:clamp(2rem,5vw,3rem);font-weight:800">Get in <span style="color:var(--wp--preset--color--brand-blue)">Touch</span></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","style":{"color":{"text":"var:preset|color|text-secondary)"},"typography":{"fontSize":"18px"}}} -->

@@ -18,7 +18,7 @@ return array(
 	<div class="wp-block-group">
 
 		<!-- wp:heading {"textAlign":"center","level":1,"style":{"color":{"text":"#ffffff"},"typography":{"fontSize":"48px","fontWeight":"800","lineHeight":"1.1"}}} -->
-		<h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:48px;font-weight:800;line-height:1.1">About <span style="color:var(--wp--preset--color--brand-blue)">Painters Dublin</span></h1>
+		<h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:clamp(2.5rem,6vw,3.5rem);font-weight:800;line-height:1.1">About <span style="color:var(--wp--preset--color--brand-blue)">Painters Dublin</span></h1>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#94a3b8"},"typography":{"fontSize":"18px","lineHeight":"1.7"}}} -->
@@ -39,7 +39,7 @@ return array(
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)">
 
 	<!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontSize":"36px","fontWeight":"800"}}} -->
-	<h2 class="wp-block-heading has-text-align-center" style="font-size:36px;font-weight:800">Our Values</h2>
+	<h2 class="wp-block-heading has-text-align-center" style="font-size:clamp(2rem,5vw,3rem);font-weight:800">Our Values</h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var:preset|spacing|7"},"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|6"}}}} -->
