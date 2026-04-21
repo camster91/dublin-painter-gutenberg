@@ -19,7 +19,7 @@ return array(
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|5"}}},"className":"dp-reveal"} -->
 <div class="wp-block-group dp-reveal" style="margin-bottom:var(--wp--preset--spacing--5)">
 	<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#f8fafc"},"border":{"radius":"9999px"},"spacing":{"padding":{"top":"var:preset|spacing|2","right":"var:preset|spacing|4","bottom":"var:preset|spacing|2","left":"var:preset|spacing|4"}},"backgroundColor":"brand-blue"},"fontSize":"small"} -->
-	<p class="has-text-align-center has-brand-blue-background-color has-background has-small-font-size" style="border-radius:9999px;padding-top:var(--wp--preset--spacing--2);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--2);padding-left:var(--wp--preset--spacing--4);color:#f8fafc">⭐ 4.9/5 Average Rating &amp;bull; 10+ Years Experience</p>
+	<p class="has-text-align-center has-background has-small-font-size" style="border-radius:9999px;padding-top:var(--wp--preset--spacing--2);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--2);padding-left:var(--wp--preset--spacing--4);color:#0f172a;background-color:rgba(255,255,255,0.9)">⭐⭐⭐⭐⭐ 4.9/5 Average Rating <span>20+ 5-star reviews</span></p>
 	<!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
