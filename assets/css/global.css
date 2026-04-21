@@ -915,3 +915,25 @@ body.dark-mode .dp-mobile-cta {
 		display: none !important;
 	}
 }
+
+/* ============================================
+ * BEFORE/AFTER GALLERY SECTION
+ * ============================================ */
+.dp-before-after-section .wp-block-columns {
+	gap: 32px 32px !important;
+}
+
+.dp-before-after-section .dp-before-after {
+	max-width: none;
+	margin: 0;
+}
+
+.dp-before-after-section .dp-ba-container {
+	box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.15);
+	border: 3px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Dark mode adjustments for dark section backgrounds */
+body.dark-mode .dp-before-after-section .dp-ba-container {
+	border-color: rgba(255, 255, 255, 0.15);
+}
