@@ -39,10 +39,10 @@ return array(
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"style":{"color":{"text":"#cbd5e1"},"typography":{"fontSize":"18px","fontWeight":"600"}}} -->
-<ul style="color:#cbd5e1;font-size:18px;font-weight:600">
-<li>✅ 100% Fixed Quotes — No hidden extras</li>
-<li>✅ Fully Insured &amp; Safe Pass Certified</li>
-<li>✅ Premium Dulux &amp; Fleetwood paints only</li>
+<ul class="wp-block-list" style="color:#cbd5e1;font-size:18px;font-weight:600">
+<li>100% Fixed Quotes — No hidden extras</li>
+<li>Fully Insured &amp; Safe Pass Certified</li>
+<li>Premium Dulux &amp; Fleetwood paints only</li>
 </ul>
 <!-- /wp:list -->
 
