@@ -317,6 +317,16 @@ body.dark-mode .dp-process-step.dp-step-visible .dp-step-circle {
 	grid-template-columns: 1fr;
 	gap: 48px;
 	align-items: center;
+	width: 100%;
+}
+
+/* Force each column to vertically center its content */
+.dp-hero-split > .wp-block-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-width: 0;
+	width: 100%;
 }
 
 @media (min-width: 1024px) {
