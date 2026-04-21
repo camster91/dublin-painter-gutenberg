@@ -937,3 +937,31 @@ body.dark-mode .dp-mobile-cta {
 body.dark-mode .dp-before-after-section .dp-ba-container {
 	border-color: rgba(255, 255, 255, 0.15);
 }
+
+/* ============================================
+ * PRICING TABLE CARD HOVER
+ * ============================================ */
+.dp-pricing-card {
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease !important;
+}
+
+.dp-pricing-card:hover {
+	transform: translateY(-8px) scale(1.02) !important;
+	box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.dp-pricing-card:hover a {
+	opacity: 1 !important;
+	filter: brightness(1.1);
+}
+
+body.dark-mode .dp-pricing-card {
+	background: #1e293b !important;
+	border-color: #334155 !important;
+}
+
+body.dark-mode .dp-pricing-card--featured {
+	border-color: var(--wp--preset--color--brand-green) !important;
+}
