@@ -858,6 +858,10 @@ body.dark-mode .dp-mobile-cta {
 	}
 }
 
+body.dark-mode .dp-pricing-card--featured {
+	border-color: var(--wp--preset--color--brand-green) !important;
+}
+
 /* ============================================
  * ANIMATIONS
  * ============================================ */
@@ -962,6 +966,43 @@ body.dark-mode .dp-pricing-card {
 	border-color: #334155 !important;
 }
 
-body.dark-mode .dp-pricing-card--featured {
-	border-color: var(--wp--preset--color--brand-green) !important;
+/* ============================================
+ * MOBILE-RESPONSIVE TWEAKS
+ * ============================================ */
+@media (max-width: 767px) {
+	/* Hero text: prevent giant clamped headings on tiny screens */
+	.dp-hero-mesh h1.wp-block-heading {
+		font-size: clamp(1.75rem, 8vw, 2.5rem) !important;
+	}
+
+	/* Service cards: bigger tap targets on mobile */
+	.dp-service-card .wp-block-button a {
+		width: 100%;
+		text-align: center;
+	}
+
+	/* Pricing cards: remove extra featured scale so cards don't go off-screen */
+	.dp-pricing-card--featured {
+		transform: none !important;
+	}
+
+	/* Process steps: smaller numbers */
+	.dp-process-step-number {
+		width: 44px !important;
+		height: 44px !important;
+		font-size: 16px !important;
+	}
+
+	/* Before/After title text */
+	.dp-ba-label {
+		font-size: 11px !important;
+		padding: 3px 12px !important;
+	}
+}
+
+/* Ultra-small screens – hero checkmark list */
+@media (max-width: 420px) {
+	.dp-hero-mesh {
+		padding: var(--wp--preset--spacing--8) var(--wp--preset--spacing--5) !important;
+	}
 }
