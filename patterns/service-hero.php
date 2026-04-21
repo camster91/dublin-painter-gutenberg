@@ -29,7 +29,7 @@ return array(
 	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--6)">
 
 		<!-- wp:button {"backgroundColor":"brand-blue","textColor":"white","style":{"border":{"radius":"16px"},"typography":{"fontWeight":"700","fontSize":"18px"},"spacing":{"padding":{"top":"16px","right":"40px","bottom":"16px","left":"40px"}}}} -->
-		<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-brand-blue-background-color has-text-color has-background wp-element-button" href="#quote-section" style="border-radius:16px;padding-top:16px;padding-right:40px;padding-bottom:16px;padding-left:40px;font-size:18px;font-weight:700">Get Free Quote</a></div>
+		<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-brand-green-background-color has-text-color has-background wp-element-button" href="#quote-section" style="border-radius:16px;padding-top:16px;padding-right:40px;padding-bottom:16px;padding-left:40px;font-size:18px;font-weight:700">Get Free Quote</a></div>
 		<!-- /wp:button -->
 
 		<!-- wp:button {"textColor":"white","className":"is-style-outline","style":{"border":{"radius":"16px","color":"#ffffff","width":"2px"},"typography":{"fontWeight":"700","fontSize":"18px"},"spacing":{"padding":{"top":"16px","right":"40px","bottom":"16px","left":"40px"}}}} -->

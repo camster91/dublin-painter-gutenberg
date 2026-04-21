@@ -42,7 +42,7 @@ return array(
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|5"}}}} -->
 <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--5)">
 <!-- wp:button {"backgroundColor":"brand-blue","textColor":"white","style":{"border":{"radius":"16px"},"typography":{"fontSize":"16px","fontWeight":"600"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-brand-blue-background-color has-text-color has-background wp-element-button" href="/interior-painting/" style="border-radius:16px;font-size:16px;font-weight:600">View Interior Services →</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-brand-green-background-color has-text-color has-background wp-element-button" href="/interior-painting/" style="border-radius:16px;padding-top:16px;padding-right:40px;padding-bottom:16px;padding-left:40px;font-size:18px;font-weight:700">View Interior Services →</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
@@ -79,7 +79,7 @@ return array(
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|5"}}}} -->
 <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--5)">
 <!-- wp:button {"backgroundColor":"brand-blue","textColor":"white","style":{"border":{"radius":"16px"},"typography":{"fontSize":"16px","fontWeight":"600"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-brand-blue-background-color has-text-color has-background wp-element-button" href="/exterior-painting/" style="border-radius:16px;font-size:16px;font-weight:600">View Exterior Services →</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-brand-green-background-color has-text-color has-background wp-element-button" href="/exterior-painting/" style="border-radius:16px;padding-top:16px;padding-right:40px;padding-bottom:16px;padding-left:40px;font-size:18px;font-weight:700">View Exterior Services →</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
@@ -132,7 +132,7 @@ return array(
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|5"}}}} -->
 <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--5)">
 <!-- wp:button {"backgroundColor":"brand-blue","textColor":"white","style":{"border":{"radius":"16px"},"typography":{"fontSize":"16px","fontWeight":"600"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-brand-blue-background-color has-text-color has-background wp-element-button" href="/commercial-painting/" style="border-radius:16px;font-size:16px;font-weight:600">View Commercial Services →</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-brand-green-background-color has-text-color has-background wp-element-button" href="/commercial-painting/" style="border-radius:16px;padding-top:16px;padding-right:40px;padding-bottom:16px;padding-left:40px;font-size:18px;font-weight:700">View Commercial Services →</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
