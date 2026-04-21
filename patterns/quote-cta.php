@@ -26,14 +26,14 @@ return array(
 <!-- /wp:button -->
 
 <!-- wp:button {"style":{"border":{"radius":"16px","color":"#64748b","width":"2px"},"typography":{"fontWeight":"700","fontSize":"18px"},"spacing":{"padding":{"top":"16px","right":"40px","bottom":"16px","left":"40px"}},"color":{"text":"#f8fafc"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-text-color wp-element-button" href="tel:012345678" style="border-radius:16px;border-color:#64748b;border-width:2px;padding-top:16px;padding-right:40px;padding-bottom:16px;padding-left:40px;font-size:18px;font-weight:700;color:#f8fafc">📞 Call 01 234 5678</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-text-color wp-element-button" href="tel:012345678" style="border-radius:16px;border-color:var(--wp--preset--color--text-secondary);border-width:2px;padding-top:16px;padding-right:40px;padding-bottom:16px;padding-left:40px;font-size:18px;font-weight:700;color:#f8fafc">📞 Call 01 234 5678</a></div>
 <!-- /wp:button -->
 
 </div>
 <!-- /wp:buttons -->
 
 <!-- wp:paragraph {"align":"center","style":{"color":{"text":"#64748b"},"typography":{"fontSize":"14px"}},"spacing":{"margin":{"top":"var:preset|spacing|5"}}} -->
-<p class="has-text-align-center" style="color:#64748b;font-size:14px;margin-top:var(--wp--preset--spacing--5)">No spam. No hidden fees. Just a straight-talking quote from a real Dublin painter.</p>
+<p class="has-text-align-center" style="color:var(--wp--preset--color--text-secondary);font-size:14px;margin-top:var(--wp--preset--spacing--5)">No spam. No hidden fees. Just a straight-talking quote from a real Dublin painter.</p>
 <!-- /wp:paragraph -->
 
 </div>
