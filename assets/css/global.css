@@ -1051,3 +1051,36 @@ body *::after {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
+
+/* ─── WordPress Layout Override for Full-Width Blocks ─── */
+/* WP's .has-global-padding constrains children. This override allows
+   our custom blocks to span the full viewport width. */
+
+/* Remove padding from the post-content wrapper when it contains our blocks */
+.entry-content.has-global-padding,
+.wp-block-post-content.has-global-padding {
+	max-width: none !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+/* Allow all dp/ blocks to be full-width */
+.wp-block-dp-hero.alignfull,
+.wp-block-dp-trust-badges.alignfull,
+.wp-block-dp-service-features.alignfull,
+.wp-block-dp-testimonials.alignfull,
+.wp-block-dp-stats-bar.alignfull,
+.wp-block-dp-process-timeline.alignfull,
+.wp-block-dp-pricing.alignfull,
+.wp-block-dp-faq-accordion.alignfull,
+.wp-block-dp-cta-section.alignfull,
+.wp-block-dp-service-areas.alignfull,
+.wp-block-dp-quote-form.alignfull,
+.wp-block-dp-before-after-slider.alignfull {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	max-width: none !important;
+	width: 100% !important;
+}
+
+/* Section containers handle their own max-width via .dp-section-container */
