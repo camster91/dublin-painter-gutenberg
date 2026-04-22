@@ -219,3 +219,16 @@ GPL-2.0-or-later
 
 **Repo:** https://github.com/camster91/dublin-painter-gutenberg  
 **Source (Next.js → WordPress):** Dublin Painter Template (Next.js 16 + React 19)
+## Architecture (v2.5.0+)
+
+This theme now includes all custom blocks directly (previously in a separate plugin).
+The `dublin-painter-blocks` plugin is no longer required — all 12 blocks are registered
+from the theme's `/blocks/` directory via `functions.php`.
+
+### Blocks Included
+- Hero, Trust Badges, Stats Bar, Service Features, Process Timeline
+- Before/After Slider, Testimonials, Pricing, FAQ Accordion
+- CTA Section, Service Areas, Quote Form
+
+Each block has: `block.json`, `render.php`, `style.css`, `acf-register.php` (ACF fields)
+Interactive blocks also include: `view.js` (frontend JS)
