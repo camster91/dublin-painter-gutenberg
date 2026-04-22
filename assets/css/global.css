@@ -1084,3 +1084,26 @@ body *::after {
 }
 
 /* Section containers handle their own max-width via .dp-section-container */
+
+/* Main Navigation */
+.dp-main-nav {
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--5, 1.5rem);
+}
+.dp-main-nav .dp-nav-link {
+	color: var(--wp--preset--color--text-secondary, #64748b);
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 500;
+	transition: color 0.2s;
+	white-space: nowrap;
+}
+.dp-main-nav .dp-nav-link:hover {
+	color: var(--wp--preset--color--brand-blue, #2563eb);
+}
+@media (max-width: 768px) {
+	.dp-main-nav {
+		display: none;
+	}
+}
