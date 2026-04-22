@@ -1150,6 +1150,7 @@ body *::after {
 }
 
 .dp-mobile-nav {
+	pointer-events: none;
 	position: fixed;
 	top: 0;
 	right: -100%;
@@ -1165,6 +1166,7 @@ body *::after {
 	overflow-y: auto;
 }
 .dp-mobile-nav.is-open {
+	pointer-events: auto;
 	right: 0;
 	aria-hidden: false;
 }
@@ -1225,7 +1227,8 @@ body *::after {
 }
 
 /* Dark mode mobile nav */
-body.dark-mode .dp-mobile-nav { background: #1e293b; }
+body.dark-mode .dp-mobile-nav {
+	pointer-events: none; background: #1e293b; }
 body.dark-mode .dp-mobile-link { color: #e2e8f0; border-color: #334155; }
 body.dark-mode .dp-mobile-link:hover { color: #60a5fa; }
 body.dark-mode .dp-hamburger,
