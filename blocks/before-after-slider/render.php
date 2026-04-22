@@ -1,39 +1,83 @@
 <?php
-/**
- * Render callback for Before/After Slider block.
- *
- * @package Dublin_Painter
- */
-
-$before_image   = ! empty( $attributes['beforeImage'] ) ? esc_url( $attributes['beforeImage'] ) : '';
-$after_image    = ! empty( $attributes['afterImage'] ) ? esc_url( $attributes['afterImage'] ) : '';
-$before_alt     = ! empty( $attributes['beforeAlt'] ) ? esc_attr( $attributes['beforeAlt'] ) : 'Before';
-$after_alt      = ! empty( $attributes['afterAlt'] ) ? esc_attr( $attributes['afterAlt'] ) : 'After';
-$initial_pos    = isset( $attributes['initialPosition'] ) ? intval( $attributes['initialPosition'] ) : 50;
-$aspect_ratio   = ! empty( $attributes['aspectRatio'] ) ? esc_attr( $attributes['aspectRatio'] ) : '21/9';
-$border_radius  = ! empty( $attributes['borderRadius'] ) ? esc_attr( $attributes['borderRadius'] ) : '24px';
-$wrapper_attr   = get_block_wrapper_attributes(
-	array(
-		'class' => 'dp-before-after',
-		'style' => "--dp-ba-pos: {$initial_pos}%; --dp-ba-radius: {$border_radius}; --dp-ba-ratio: {$aspect_ratio};",
-	)
-);
+if ( ! defined( 'ABSPATH' ) ) exit;
+$badge_text = get_field( 'badge_text' ) ?? $attributes['badge_text'] ?? 'Real Results';
+$heading = get_field( 'heading' ) ?? $attributes['heading'] ?? 'See the Transformation';
+$subheading = get_field( 'subheading' ) ?? $attributes['subheading'] ?? 'Real projects. Real results. Drag the slider to compare.';
+$columns = get_field( 'columns' ) ?? $attributes['columns'] ?? 2;
+$show_labels = get_field( 'showLabels' ) ?? $attributes['showLabels'] ?? true;
+$show_location = get_field( 'showLocation' ) ?? $attributes['showLocation'] ?? true;
+$only_featured = get_field( 'onlyFeatured' ) ?? $attributes['onlyFeatured'] ?? false;
+$max_projects = get_field( 'maxProjects' ) ?? $attributes['maxProjects'] ?? 4;
+$projects = array();
+if ( post_type_exists( 'dp_project' ) ) {
+	$args = array( 'post_type' => 'dp_project', 'posts_per_page' => intval( $max_projects ), 'orderby' => 'date', 'order' => 'DESC', 'post_status' => 'publish' );
+	if ( $only_featured ) {
+		$args['meta_query'] = array( array( 'key' => 'featured', 'value' => '1', 'compare' => '=' ) );
+	}
+	$posts = get_posts( $args );
+	// If no featured projects found, try again without the meta filter
+	if ( empty( $posts ) && $only_featured ) {
+		unset( $args['meta_query'] );
+		$posts = get_posts( $args );
+	}
+	foreach ( $posts as $post ) {
+		$before_img = get_field( 'before_image', $post->ID );
+		$after_img = get_field( 'after_image', $post->ID );
+		$before_url = is_array( $before_img ) ? ( $before_img['url'] ?? '' ) : ( is_numeric( $before_img ) ? wp_get_attachment_url( $before_img ) : '' );
+		$after_url = is_array( $after_img ) ? ( $after_img['url'] ?? '' ) : ( is_numeric( $after_img ) ? wp_get_attachment_url( $after_img ) : '' );
+		if ( ! $before_url && ! $after_url ) continue; // Skip projects without images
+		$projects[] = array(
+			'title'    => get_the_title( $post->ID ),
+			'location' => get_field( 'project_location', $post->ID ) ?: '',
+			'service'  => get_field( 'service_type', $post->ID ) ?: '',
+			'before'   => $before_url,
+			'after'    => $after_url,
+		);
+	}
+}
+if ( empty( $projects ) ) {
+	// Fallback: static demo data with theme placeholder images
+	$theme_uri = get_stylesheet_directory_uri();
+	$projects = array(
+		array( 'title' => 'Georgian Door Refresh', 'location' => 'Ranelagh', 'service' => 'Exterior', 'before' => $theme_uri . '/assets/images/before.jpg',  'after' => $theme_uri . '/assets/images/after.jpg' ),
+		array( 'title' => 'Living Room Transformation', 'location' => 'Blackrock', 'service' => 'Interior', 'before' => $theme_uri . '/assets/images/project_exterior_1.jpg', 'after' => $theme_uri . '/assets/images/project_georgian_door.jpg' ),
+	);
+}
+$col_class = $columns >= 3 ? 'dp-ba-grid--3' : ( $columns >= 2 ? 'dp-ba-grid--2' : 'dp-ba-grid--1' );
 ?>
-<div <?php echo $wrapper_attr; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-	<div class="dp-ba-container" data-initial="<?php echo esc_attr( $initial_pos ); ?>">
-		<div class="dp-ba-after-wrap">
-			<img class="dp-ba-after" src="<?php echo $after_image; ?>" alt="<?php echo $after_alt; ?>" loading="lazy" />
-			<span class="dp-ba-label dp-ba-label-after" aria-hidden="true">AFTER</span>
+<section <?php echo get_block_wrapper_attributes( array( 'class' => 'dp-ba-section' ) ); ?>>
+	<div class="dp-section-container">
+		<div class="dp-section-header">
+			<?php if ( $badge_text ) : ?><div class="dp-badge-pill"><?php echo esc_html( $badge_text ); ?></div><?php endif; ?>
+			<?php if ( $heading ) : ?><h2 class="dp-section-heading"><?php echo esc_html( $heading ); ?></h2><?php endif; ?>
+			<?php if ( $subheading ) : ?><p class="dp-section-subheading"><?php echo esc_html( $subheading ); ?></p><?php endif; ?>
 		</div>
-		<div class="dp-ba-before-wrap" style="clip-path: inset(0 <?php echo 100 - $initial_pos; ?>% 0 0);">
-			<img class="dp-ba-before" src="<?php echo $before_image; ?>" alt="<?php echo $before_alt; ?>" loading="lazy" />
-			<span class="dp-ba-label dp-ba-label-before" aria-hidden="true">BEFORE</span>
-		</div>
-		<div class="dp-ba-handle" role="slider" tabindex="0" aria-label="Compare before and after images" aria-valuenow="<?php echo esc_attr( $initial_pos ); ?>" aria-valuemin="0" aria-valuemax="100">
-			<div class="dp-ba-handle-circle">
-				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-			</div>
+		<div class="dp-ba-grid <?php echo esc_attr( $col_class ); ?>">
+			<?php foreach ( $projects as $project ) :
+				$before = $project['before'] ?? '';
+				$after = $project['after'] ?? '';
+				if ( ! $before && ! $after ) continue;
+			?>
+				<div class="dp-ba-card">
+					<div class="dp-ba-slider" data-slider>
+						<?php if ( $after ) : ?><img src="<?php echo esc_url( $after ); ?>" alt="<?php echo esc_attr( $project['title'] ?? 'After' ); ?> — After" class="dp-ba-after" loading="lazy"><?php endif; ?>
+						<?php if ( $before ) : ?><img src="<?php echo esc_url( $before ); ?>" alt="<?php echo esc_attr( $project['title'] ?? 'Before' ); ?> — Before" class="dp-ba-before" loading="lazy"><?php endif; ?>
+						<div class="dp-ba-divider" aria-hidden="true"><div class="dp-ba-handle"></div></div>
+					</div>
+					<?php if ( $show_labels ) : ?>
+						<div class="dp-ba-labels">
+							<span class="dp-ba-label dp-ba-label--before">Before</span>
+							<span class="dp-ba-label dp-ba-label--after">After</span>
+						</div>
+					<?php endif; ?>
+					<?php if ( $show_location && ! empty( $project['title'] ) ) : ?>
+						<div class="dp-ba-info">
+							<strong><?php echo esc_html( $project['title'] ); ?></strong>
+							<?php if ( ! empty( $project['location'] ) ) : ?><span><?php echo esc_html( $project['location'] ); ?></span><?php endif; ?>
+						</div>
+					<?php endif; ?>
+				</div>
+			<?php endforeach; ?>
 		</div>
 	</div>
-</div>
+</section>

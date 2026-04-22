@@ -1,40 +1,42 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "dublin-painter/before-after-slider",
-	"title": "Before / After Slider",
-	"description": "Interactive image comparison slider — drag to reveal before/after.",
+	"name": "dp/before-after-slider",
+	"title": "Before/After Slider",
+	"description": "Interactive drag slider comparing before and after project photos. Pulls projects from the Projects CPT.",
 	"category": "dublin-painter",
-	"icon": "leftright",
-	"keywords": ["before", "after", "compare", "slider", "painting"],
+	"icon": "columns",
+	"keywords": ["before", "after", "slider", "project", "gallery"],
+	"version": "1.0.0",
+	"textdomain": "dublin-painter",
 	"attributes": {
-		"beforeImage": {
-			"type": "string",
-			"default": "/wp-content/themes/dublin-painter/assets/images/before.jpg"
-		},
-		"afterImage": {
-			"type": "string",
-			"default": "/wp-content/themes/dublin-painter/assets/images/after.jpg"
-		},
-		"beforeAlt": {
-			"type": "string",
-			"default": "Before painting"
-		},
-		"afterAlt": {
-			"type": "string",
-			"default": "After painting"
-		},
-		"initialPosition": {
+		"columns": {
 			"type": "number",
-			"default": 50
+			"default": 2
 		},
-		"aspectRatio": {
-			"type": "string",
-			"default": "21/9"
+		"showLabels": {
+			"type": "boolean",
+			"default": true
 		},
-		"borderRadius": {
+		"showLocation": {
+			"type": "boolean",
+			"default": true
+		},
+		"onlyFeatured": {
+			"type": "boolean",
+			"default": true
+		},
+		"maxProjects": {
+			"type": "number",
+			"default": 4
+		},
+		"heading": {
 			"type": "string",
-			"default": "24px"
+			"default": "See the Transformation"
+		},
+		"subheading": {
+			"type": "string",
+			"default": "Real projects. Real results. Drag the slider to compare."
 		}
 	},
 	"supports": {
@@ -45,10 +47,8 @@
 			"padding": true
 		}
 	},
-	"editorScript": "file:./editor.js",
-	"script": "file:./frontend.js",
-	"style": "file:./style.css",
 	"editorStyle": "file:./editor.css",
-	"render": "file:./render.php",
-	"textdomain": "dublin-painter"
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
 }

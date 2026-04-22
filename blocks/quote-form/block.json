@@ -1,24 +1,22 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "dublin-painter/quote-form",
-	"title": "Multi-Step Quote Form",
-	"description": "7-step painting estimate form with real-time price calculation.",
+	"name": "dp/quote-form",
+	"title": "Quote Request Form",
+	"description": "Contact form with validation for quote requests.",
 	"category": "dublin-painter",
-	"icon": "forms",
+	"icon": "clipboard-list",
+	"version": "1.0.0",
+	"textdomain": "dublin-painter",
 	"attributes": {
-		"formEndpoint": {
+		"heading": { "type": "string", "default": "Get Your Free Estimate" },
+		"subheading": {
 			"type": "string",
-			"default": "https://formspree.io/f/placeholder"
+			"default": "Takes 60 seconds. No obligation."
 		}
 	},
-	"supports": {
-		"html": false,
-		"align": ["wide", "full"],
-		"spacing": { "margin": true, "padding": true }
-	},
-	"render": "file:./render.php",
-	"script": "file:./frontend.js",
+	"supports": { "html": false, "align": ["wide", "full"] },
 	"style": "file:./style.css",
-	"textdomain": "dublin-painter"
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
 }

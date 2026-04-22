@@ -1,17 +1,47 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "dublin-painter/service-areas",
+	"name": "dp/service-areas",
 	"title": "Service Areas",
-	"description": "Dublin Painter Service Areas block.",
+	"description": "Pill grid of Dublin areas on dark background.",
 	"category": "dublin-painter",
-	"icon": "location",
-	"attributes": {},
-	"supports": {
-		"html": false,
-		"align": ["wide", "full"],
-		"spacing": { "margin": true, "padding": true }
+	"icon": "map-pin",
+	"version": "1.0.0",
+	"textdomain": "dublin-painter",
+	"attributes": {
+		"heading": { "type": "string", "default": "Proudly Serving All of Dublin" },
+		"areas": {
+			"type": "array",
+			"default": [
+				"Dublin City Centre",
+				"Dublin 1",
+				"Dublin 2",
+				"Dublin 4",
+				"Dublin 6",
+				"Dublin 7",
+				"Ranelagh",
+				"Rathmines",
+				"Ballsbridge",
+				"Donnybrook",
+				"Blackrock",
+				"Dun Laoghaire",
+				"Malahide",
+				"Howth",
+				"Castleknock",
+				"Clontarf",
+				"Swords",
+				"Lucan",
+				"Tallaght",
+				"Crumlin",
+				"Phibsboro",
+				"Sandymount",
+				"Killiney",
+				"Dalkey",
+				"Glasnevin"
+			]
+		}
 	},
-	"render": "file:./render.php",
-	"textdomain": "dublin-painter"
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"style": "file:./style.css",
+	"render": "file:./render.php"
 }

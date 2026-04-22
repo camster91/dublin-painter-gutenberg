@@ -1,24 +1,26 @@
 <?php
-/**
- * Render callback for Service Areas block.
- */
-$wrapper_attr = get_block_wrapper_attributes();
-$areas = array(
-  'Donnybrook', 'Rathmines', 'Dundrum', 'Blackrock', 'Foxrock',
-  'Sandymount', 'Ballsbridge', 'Clontarf', 'Howth', 'Malahide',
-  'Dun Laoghaire', 'Killiney', 'Sutton', 'Terenure', 'Templeogue',
-  'Rathgar', 'Milltown', 'Stillorgan', 'Kilmainham', 'South Dublin',
-  'North Dublin', 'City Centre', 'Docklands', 'South County'
-);
+if ( ! defined( 'ABSPATH' ) ) exit;
+$badge_text = get_field( 'badge_text' ) ?? $attributes['badge_text'] ?? 'Coverage Map';
+$heading = get_field( 'heading' ) ?? $attributes['heading'] ?? 'Proudly Serving All of Dublin';
+$subheading = get_field( 'subheading' ) ?? $attributes['subheading'] ?? 'We cover every corner of Dublin and surrounding counties within 30km.';
+$areas_raw = get_field( 'areas' ) ?: $attributes['areas'] ?? array( 'Dublin City Centre', 'Ranelagh', 'Rathmines', 'Ballsbridge', 'Blackrock', 'Dun Laoghaire', 'Malahide', 'Howth', 'Castleknock', 'Clontarf', 'Swords', 'Lucan', 'Tallaght', 'Crumlin', 'Phibsboro', 'Sandymount', 'Killiney', 'Dalkey', 'Glasnevin' );
+$areas = array();
+foreach ( $areas_raw as $area ) {
+	$areas[] = is_array( $area ) ? ( $area['name'] ?? '' ) : $area;
+}
+$areas = array_filter( $areas );
 ?>
-<div <?php echo $wrapper_attr; ?>>
-	<div style="text-align:center;margin-bottom:40px;">
-		<h2 style="font-size:32px;font-weight:800;color:var(--wp--preset--color--white);margin:0 0 16px;">Areas We Cover</h2>
-		<p style="color:var(--wp--preset--color--text-light);font-size:17px;margin:0;">Serving all Dublin and surrounding areas</p>
+<section <?php echo get_block_wrapper_attributes( array( 'class' => 'dp-areas-section' ) ); ?>>
+	<div class="dp-section-container">
+		<div class="dp-section-header">
+			<?php if ( $badge_text ) : ?><div class="dp-badge-pill"><?php echo esc_html( $badge_text ); ?></div><?php endif; ?>
+			<?php if ( $heading ) : ?><h2 class="dp-section-heading"><?php echo esc_html( $heading ); ?></h2><?php endif; ?>
+			<?php if ( $subheading ) : ?><p class="dp-section-subheading"><?php echo esc_html( $subheading ); ?></p><?php endif; ?>
+		</div>
+		<div class="dp-areas-grid">
+			<?php foreach ( $areas as $area ) : ?>
+				<span class="dp-area-pill"><?php echo esc_html( $area ); ?></span>
+			<?php endforeach; ?>
+		</div>
 	</div>
-	<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:900px;margin:0 auto;">
-		<?php foreach ( $areas as $area ) : ?>
-		<span style="padding:8px 20px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--wp--preset--color--text-light);font-size:15px;font-weight:500;"><?php echo esc_html( $area ); ?></span>
-		<?php endforeach; ?>
-	</div>
-</div>
+</section>

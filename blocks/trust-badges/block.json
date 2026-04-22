@@ -1,17 +1,41 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "dublin-painter/trust-badges",
+	"name": "dp/trust-badges",
 	"title": "Trust Badges",
-	"description": "Dublin Painter Trust Badges block.",
+	"description": "4-column trust badges with icon circles, labels and descriptions.",
 	"category": "dublin-painter",
 	"icon": "shield",
-	"attributes": {},
-	"supports": {
-		"html": false,
-		"align": ["wide", "full"],
-		"spacing": { "margin": true, "padding": true }
+	"version": "1.0.0",
+	"textdomain": "dublin-painter",
+	"attributes": {
+		"badges": {
+			"type": "array",
+			"default": [
+				{
+					"icon": "star",
+					"label": "4.9/5 Google Rating",
+					"text": "250+ Verified Reviews"
+				},
+				{
+					"icon": "shield",
+					"label": "Fully Insured",
+					"text": "€2M Public Liability"
+				},
+				{
+					"icon": "map",
+					"label": "Serving All Dublin",
+					"text": "City & 30km Surrounds"
+				},
+				{
+					"icon": "clock",
+					"label": "Reliable & On Time",
+					"text": "Every Project Guaranteed"
+				}
+			]
+		}
 	},
-	"render": "file:./render.php",
-	"textdomain": "dublin-painter"
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"style": "file:./style.css",
+	"render": "file:./render.php"
 }
