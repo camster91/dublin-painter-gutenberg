@@ -2,9 +2,11 @@
  * Dublin Painter — Main Front-End JS
  *
  * - Dark mode toggle with localStorage persistence
+ * - Mobile navigation hamburger menu
  * - Section reveal animation (IntersectionObserver)
  * - Process timeline scroll animation
  * - Mobile CTA bar
+ * - Smooth scroll for anchor links
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,7 +18,50 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	// ============================================
-	// MOBILE CTA BAR — inject at bottom of body on small screens
+	// MOBILE NAVIGATION — Hamburger menu toggle
+	// ============================================
+	const mobileToggle = document.querySelector(".dp-mobile-toggle");
+	const mobileNav = document.querySelector(".dp-mobile-nav");
+
+	if (mobileToggle && mobileNav) {
+		const backdrop = document.createElement("div");
+		backdrop.className = "dp-mobile-backdrop";
+		document.body.appendChild(backdrop);
+
+		function openMobileNav() {
+			mobileNav.classList.add("is-open");
+			mobileNav.setAttribute("aria-hidden", "false");
+			mobileToggle.setAttribute("aria-expanded", "true");
+			backdrop.classList.add("is-open");
+			document.body.style.overflow = "hidden";
+		}
+
+		function closeMobileNav() {
+			mobileNav.classList.remove("is-open");
+			mobileNav.setAttribute("aria-hidden", "true");
+			mobileToggle.setAttribute("aria-expanded", "false");
+			backdrop.classList.remove("is-open");
+			document.body.style.overflow = "";
+		}
+
+		mobileToggle.addEventListener("click", () => {
+			const isOpen = mobileNav.classList.contains("is-open");
+			isOpen ? closeMobileNav() : openMobileNav();
+		});
+
+		backdrop.addEventListener("click", closeMobileNav);
+
+		mobileNav.querySelectorAll("a").forEach((link) => {
+			link.addEventListener("click", closeMobileNav);
+		});
+
+		document.addEventListener("keydown", (e) => {
+			if (e.key === "Escape") closeMobileNav();
+		});
+	}
+
+	// ============================================
+	// MOBILE CTA BAR — inject at bottom of body
 	// ============================================
 	const ctaBar = document.createElement("div");
 	ctaBar.className = "dp-mobile-cta";
