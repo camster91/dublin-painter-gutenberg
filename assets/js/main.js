@@ -23,26 +23,40 @@ document.addEventListener("DOMContentLoaded", () => {
 	const mobileToggle = document.querySelector(".dp-mobile-toggle");
 	const mobileNav = document.querySelector(".dp-mobile-nav");
 
+	const openMobileNav = () => {
+		if (mobileNav) {
+			mobileNav.classList.add("is-open");
+			mobileNav.setAttribute("aria-hidden", "false");
+		}
+		if (mobileToggle) {
+			mobileToggle.setAttribute("aria-expanded", "true");
+		}
+		const backdrop = document.querySelector(".dp-mobile-backdrop");
+		if (backdrop) {
+			backdrop.classList.add("is-open");
+		}
+		document.body.style.overflow = "hidden";
+	};
+
+	const closeMobileNav = () => {
+		if (mobileNav) {
+			mobileNav.classList.remove("is-open");
+			mobileNav.setAttribute("aria-hidden", "true");
+		}
+		if (mobileToggle) {
+			mobileToggle.setAttribute("aria-expanded", "false");
+		}
+		const backdrop = document.querySelector(".dp-mobile-backdrop");
+		if (backdrop) {
+			backdrop.classList.remove("is-open");
+		}
+		document.body.style.overflow = "";
+	};
+
 	if (mobileToggle && mobileNav) {
 		const backdrop = document.createElement("div");
 		backdrop.className = "dp-mobile-backdrop";
 		document.body.appendChild(backdrop);
-
-		function openMobileNav() {
-			mobileNav.classList.add("is-open");
-			mobileNav.setAttribute("aria-hidden", "false");
-			mobileToggle.setAttribute("aria-expanded", "true");
-			backdrop.classList.add("is-open");
-			document.body.style.overflow = "hidden";
-		}
-
-		function closeMobileNav() {
-			mobileNav.classList.remove("is-open");
-			mobileNav.setAttribute("aria-hidden", "true");
-			mobileToggle.setAttribute("aria-expanded", "false");
-			backdrop.classList.remove("is-open");
-			document.body.style.overflow = "";
-		}
 
 		mobileToggle.addEventListener("click", () => {
 			const isOpen = mobileNav.classList.contains("is-open");
